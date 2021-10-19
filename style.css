@@ -29,7 +29,7 @@ main>p{
     text-align: center;
     color: #f4f4f4;
 }
-#selecao{
+#selecao, #edit{
     display: flex;
     justify-content:center;
     align-items: center;
@@ -41,7 +41,7 @@ main>p{
 #switch{
     display: none;
 }
-label{
+label[for='switch']{
     display:block;
     width: 70px;
     height: 26px;
@@ -53,7 +53,7 @@ label{
     position: relative;
     margin:10px 20px;
 }
-label::after{
+label[for='switch']::after{
     content:"";
     width: 20px;
     height: 20px;
@@ -64,10 +64,10 @@ label::after{
     left:2.5px;
     transition:0.5s;
 }
-label:active::after{
+label[for='switch']:active::after{
     width: 22px;
 }
-#switch:checked + label::after{
+#switch:checked + label[for='switch']::after{
     left: calc(100%-70px);
     transform: translateX(45px)
 }
@@ -113,4 +113,13 @@ main>input[type='text']{
 #topRight, #bottomRight{
     margin-right:-3rem;
     float: right;
+}
+#edit{
+    margin-top:-20px;
+}
+#avancado{
+    margin-left:10px;
+}
+label[for="avancado"]{
+    color:#f4f4f4;
 }
