@@ -123,3 +123,31 @@ main>input[type='text']{
 label[for="avancado"]{
     color:#f4f4f4;
 }
+.avancado{
+   position: relative;
+}
+.right{
+   float:right;
+}
+#topLeftWidth{
+   left:-3rem;
+   top:1.9rem;
+}
+#topRightWidth{
+   right:-3rem;
+   top:1.9rem;
+}
+#bottomLeftWidth{
+   left:-3rem;
+   bottom:1.9rem;
+}
+#bottomRightWidth{
+   right:-3rem;
+   bottom:1.9rem;
+}
+#topLeftHeight,#bottomLeftHeight{
+   left:-3.35rem;
+}
+#topRightHeight,#bottomRightHeight{
+   right:-3.35rem;
+}
