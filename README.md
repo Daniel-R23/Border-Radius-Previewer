@@ -12,6 +12,10 @@
 
 [X] Usuário deve conseguir mudar todos os 8 possíveis valores do border-radius na ordem para criar uma forma complexa
 
+## Resultado
+
+![Resultado](https://user-images.githubusercontent.com/53978097/138125770-7a0f7017-cb6e-46b5-afb5-f74a1df8ab34.gif)
+
 ## Como funciona o border-radius?
 
 O valor da propriedade corresponde ao raio de um círculo inscrito em um quadrado cujo vértice coincide com o vértice do elemento que deverá ter a borda arredondada.
