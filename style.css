@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #1a1a1a;
+    background-color: #101020;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -13,21 +13,23 @@ body{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 header{
-    height: 20vh;
+    width: 100vw;
+    height: 15vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding:0px 50px
 }
 h1{
     color:#f4f4f4;
 }
 main{
-    height: 80vh;
+    height: 85vh;
 }
 main>p{
     font-size: 1.5rem;
     text-align: center;
-    color: #f4f4f4;
+    color: #d3d3d3;
 }
 #selecao, #edit{
     display: flex;
@@ -35,7 +37,7 @@ main>p{
     align-items: center;
 }
 #selecao>span{
-    color:#f4f4f4;
+    color:#d3d3d3;
     font-size: 1.5rem;
 }
 #switch{
@@ -48,7 +50,7 @@ label[for='switch']{
     background-color:#477a85;
     border-radius:25px;
     cursor: pointer;
-    transform: 0.5s;
+    transition: 0.5s ease;
     box-shadow: 0 0 10px #477a8550;
     position: relative;
     margin:10px 20px;
@@ -60,52 +62,63 @@ label[for='switch']::after{
     background-color:#e8f5f7;
     position: absolute;
     border-radius: 50px;
-    top:2.5px;
-    left:2.5px;
+    top:3px;
+    left:3px;
     transition:0.5s;
 }
 label[for='switch']:active::after{
     width: 22px;
 }
+#switch:checked+ label[for='switch']{
+    background-color:#404060;
+}
 #switch:checked + label[for='switch']::after{
     left: calc(100%-70px);
-    transform: translateX(45px)
+    transform: translateX(45px);
 }
 #box{
     width:370px;
     height: 370px;
-    background-color: #f4f4f4;
+    background-color: #d3d3d3;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     flex-flow:column;
-    padding:50px;
+    padding:35px;
 }
 #code{
     font-size:1rem;
     line-height: 2;
 }
 #copiar{
-    background-color:#fff;
+    background-color: #404060;
     padding:15px 30px;
     border:none;
     border-radius:30px;
     box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
-    transition: 0.5s ease
+    transition: 0.5s ease;
+    color: #dadada
 }
 #copiar:hover{
     cursor:pointer;
     background-color:#dadada;
-    padding:13px 25px;
-    box-shadow: 3px 3px 3px rgba(0,0,0,0.5)
+    padding:13px 27px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+    color:#404060;
+    transition: 0.5s ease;
 }
-main>input[type='text']{
+#copiar:active{
+    background-color:#404060;
+    color:#dadada
+}
+main>input[type='number']{
     width: 3rem;
     height: 2rem;
     color:#1a1a1a;
     font-size: 1rem;
     font-weight: bold;
     text-align: center;
+    border:none;
 }
 #topLeft, #bottomLeft{
     margin-left:-3rem

@@ -15,10 +15,10 @@ const advancedInputs = [
    document.getElementById("topLeftHeight"),
    document.getElementById("topRightWidth"),
    document.getElementById("topRightHeight"),
-   document.getElementById("bottomLeftWidth"),
-   document.getElementById("bottomLeftHeight"),
    document.getElementById("bottomRightWidth"),
    document.getElementById("bottomRightHeight"),
+   document.getElementById("bottomLeftWidth"),
+   document.getElementById("bottomLeftHeight"),
 
 ]
 
@@ -32,13 +32,19 @@ setInterval(
          })
          advancedInputs.forEach((input)=>{
             input.style.display='inline-block'
+            
          })
-         
-         
-         box.style.borderRadius = `${advancedInputs[0].value}${unidade} ${advancedInputs[2].value}${unidade} ${advancedInputs[4].value}${unidade} ${advancedInputs[6].value}${unidade} / ${advancedInputs[1].value}${unidade} ${advancedInputs[3].value}${unidade} ${advancedInputs[5].value}${unidade} ${advancedInputs[7].value}${unidade}`
+
+         const advancedValue = `${advancedInputs[0].value}${unidade} ${advancedInputs[2].value}${unidade} ${advancedInputs[4].value}${unidade} ${advancedInputs[6].value}${unidade} / ${advancedInputs[1].value}${unidade} ${advancedInputs[3].value}${unidade} ${advancedInputs[5].value}${unidade} ${advancedInputs[7].value}${unidade}`
+
+         code.innerHTML=`border-radius:<br>${advancedValue}`
+         code.style.textAlign='center'
+         box.style.borderRadius = advancedValue
+         document.getElementById('edit').style.marginLeft='100px'
          
       }
       else if (!checkAvancado.checked) {
+          document.getElementById('edit').style.marginLeft='0px'
           basicInputs.forEach((input)=>{
             input.style.display='inline-block'
          })
